@@ -13,7 +13,7 @@ import debouncePromise from "./utils/debouncePromise";
 
 import "./index.scss";
 
-interface AlgoliaAutocompleteProps extends OmittedRecords {
+interface AlgoliaAutocompleteProps extends Partial<AutocompleteOptions<AlgoliaRecord>> {
   branch: string;
   debounceTimeout?: number;
   searchClient: SearchClient;
@@ -22,16 +22,6 @@ interface AlgoliaAutocompleteProps extends OmittedRecords {
 }
 
 type AlgoliaSource = AutocompleteSource<HighlightedHit<AlgoliaRecord>>;
-
-type OmittedRecords = Omit<
-  AutocompleteOptions<AlgoliaRecord>,
-  "autoFocus" | "container" | "getSources" | "panelPlacement" | "render" | "renderer"
->;
-
-const tryDebounce = async (items: AlgoliaSource, time?: number): Promise<AlgoliaSource> =>
-  new Promise<AlgoliaSource>((resolve) =>
-    time ? debouncePromise((items) => resolve(items), time)(items) : resolve(items)
-  );
 
 const getSources = (
   searchClient: SearchClient,
@@ -61,6 +51,11 @@ const getSources = (
   );
 };
 
+const tryDebounce = async (items: AlgoliaSource, time?: number): Promise<AlgoliaSource> =>
+  new Promise<AlgoliaSource>((resolve) =>
+    time ? debouncePromise((items) => resolve(items), time)(items) : resolve(items)
+  );
+
 const AlgoliaAutocomplete = (props: AlgoliaAutocompleteProps): JSX.Element => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const panelRootRef = useRef<Root | null>(null);
@@ -81,6 +76,7 @@ const AlgoliaAutocomplete = (props: AlgoliaAutocompleteProps): JSX.Element => {
         )
       ],
       panelPlacement: "input-wrapper-width",
+      placeholder: "Search...",
       render: ({ children }, root) => {
         if (!panelRootRef.current || rootRef.current !== root) {
           rootRef.current = root;
