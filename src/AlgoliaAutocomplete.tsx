@@ -6,7 +6,7 @@ import type { SearchClient } from "algoliasearch/lite";
 import { createElement, Fragment, useEffect, useRef } from "react";
 import type { Root } from "react-dom/client";
 import { createRoot } from "react-dom/client";
-import type { AlgoliaRecord } from "./@types";
+import type { AlgoliaRecord } from "./types";
 import { TEMPLATES } from "./templates";
 import computeIndexName from "./utils/computeIndexName";
 import debouncePromise from "./utils/debouncePromise";

@@ -1,7 +1,6 @@
 import type { AutocompleteComponents, VNode } from "@algolia/autocomplete-js";
 import type { Hit } from "@algolia/client-search";
-
-import type { AlgoliaRecord } from "./@types";
+import type { AlgoliaRecord } from "./types";
 
 export const TEMPLATES = {
   item: (hit: AlgoliaRecord, components: AutocompleteComponents): JSX.Element => {
