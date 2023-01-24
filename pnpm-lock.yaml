@@ -5,9 +5,7 @@ specifiers:
   '@algolia/autocomplete-preset-algolia': ^1.7.4
   '@algolia/autocomplete-theme-classic': ^1.7.4
   '@algolia/client-search': ^4.14.3
-  '@algolia/transporter': ^4.14.3
   '@babel/core': ^7.20.12
-  '@babel/preset-env': ^7.20.2
   '@rollup/plugin-commonjs': ^24.0.0
   '@rollup/plugin-node-resolve': ^15.0.1
   '@rollup/plugin-terser': ^0.3.0
@@ -15,9 +13,7 @@ specifiers:
   '@storybook/addon-essentials': ^6.5.15
   '@storybook/addon-interactions': ^6.5.15
   '@storybook/addon-links': ^6.5.15
-  '@storybook/builder-webpack4': ^6.5.15
   '@storybook/builder-webpack5': ^6.5.15
-  '@storybook/manager-webpack4': ^6.5.15
   '@storybook/manager-webpack5': ^6.5.15
   '@storybook/react': ^6.5.15
   '@storybook/testing-library': ^0.0.13
@@ -27,13 +23,10 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.48.2
   '@typescript-eslint/parser': ^5.48.2
   algoliasearch: ^4.14.3
-  babel-loader: ^8.3.0
-  core-js: ^3.27.1
   eslint: ^8.32.0
   eslint-config-prettier: ^8.6.0
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-storybook: ^0.6.10
-  mustache: ^4.2.0
   node-sass: ^8.0.0
   postcss: ^8.4.21
   postcss-preset-env: ^7.8.3
@@ -56,21 +49,17 @@ devDependencies:
   '@algolia/autocomplete-preset-algolia': 1.7.4_dk4ct527ug5whbfokpeal2wzha
   '@algolia/autocomplete-theme-classic': 1.7.4
   '@algolia/client-search': 4.14.3
-  '@algolia/transporter': 4.14.3
   '@babel/core': 7.20.12
-  '@babel/preset-env': 7.20.2_@babel+core@7.20.12
   '@rollup/plugin-commonjs': 24.0.1_rollup@3.10.1
   '@rollup/plugin-node-resolve': 15.0.1_rollup@3.10.1
   '@rollup/plugin-terser': 0.3.0_rollup@3.10.1
   '@storybook/addon-actions': 6.5.15_biqbaboplfbrettd7655fr4n2y
-  '@storybook/addon-essentials': 6.5.15_hhttjlt2uy7mdyth6pp6kmlar4
+  '@storybook/addon-essentials': 6.5.15_5qyduokzhknxufpwjkgyk3ypfq
   '@storybook/addon-interactions': 6.5.15_w2ng4dwcw5nax7k7hnuk67dydq
   '@storybook/addon-links': 6.5.15_biqbaboplfbrettd7655fr4n2y
-  '@storybook/builder-webpack4': 6.5.15_72f5ylvv5qyncwuu36nsfplvaa
   '@storybook/builder-webpack5': 6.5.15_72f5ylvv5qyncwuu36nsfplvaa
-  '@storybook/manager-webpack4': 6.5.15_72f5ylvv5qyncwuu36nsfplvaa
   '@storybook/manager-webpack5': 6.5.15_72f5ylvv5qyncwuu36nsfplvaa
-  '@storybook/react': 6.5.15_pplgzvcthp5vildq7pwhtetgr4
+  '@storybook/react': 6.5.15_gerc4t5mcxme6pvpkyl2nginqa
   '@storybook/testing-library': 0.0.13_biqbaboplfbrettd7655fr4n2y
   '@types/node': 18.11.18
   '@types/react': 18.0.27
@@ -78,13 +67,10 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.49.0_iu322prlnwsygkcra5kbpy22si
   '@typescript-eslint/parser': 5.49.0_7uibuqfxkfaozanbtbziikiqje
   algoliasearch: 4.14.3
-  babel-loader: 8.3.0_@babel+core@7.20.12
-  core-js: 3.27.2
   eslint: 8.32.0
   eslint-config-prettier: 8.6.0_eslint@8.32.0
   eslint-plugin-prettier: 4.2.1_cn4lalcyadplruoxa5mhp7j3dq
   eslint-plugin-storybook: 0.6.10_7uibuqfxkfaozanbtbziikiqje
-  mustache: 4.2.0
   node-sass: 8.0.0
   postcss: 8.4.21
   postcss-preset-env: 7.8.3_postcss@8.4.21
@@ -2448,7 +2434,7 @@ packages:
       - webpack-command
     dev: true
 
-  /@storybook/addon-essentials/6.5.15_hhttjlt2uy7mdyth6pp6kmlar4:
+  /@storybook/addon-essentials/6.5.15_5qyduokzhknxufpwjkgyk3ypfq:
     resolution: {integrity: sha512-m3EY6BhUk6Z9Et7P5wGaRGNoEDHzJIOsLbGS/4IXvIoDfrqmNIilqUQl8kfDqpVdBSFprvpacHpKpLosu9H37w==}
     peerDependencies:
       '@babel/core': ^7.9.6
@@ -2516,7 +2502,6 @@ packages:
       '@storybook/addon-viewport': 6.5.15_biqbaboplfbrettd7655fr4n2y
       '@storybook/addons': 6.5.15_biqbaboplfbrettd7655fr4n2y
       '@storybook/api': 6.5.15_biqbaboplfbrettd7655fr4n2y
-      '@storybook/builder-webpack4': 6.5.15_72f5ylvv5qyncwuu36nsfplvaa
       '@storybook/builder-webpack5': 6.5.15_72f5ylvv5qyncwuu36nsfplvaa
       '@storybook/core-common': 6.5.15_72f5ylvv5qyncwuu36nsfplvaa
       '@storybook/node-logger': 6.5.15
@@ -3490,7 +3475,7 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/react/6.5.15_pplgzvcthp5vildq7pwhtetgr4:
+  /@storybook/react/6.5.15_gerc4t5mcxme6pvpkyl2nginqa:
     resolution: {integrity: sha512-iQta2xOs/oK0sw/zpn3g/huvOmvggzi8z2/WholmUmmRiSQRo9lOhRXH0u13T4ja4fEa+u7m58G83xOG6i73Kw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
@@ -3523,14 +3508,12 @@ packages:
       '@babel/preset-react': 7.18.6_@babel+core@7.20.12
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.10_ohj47mxwagpoxvu7nhhwxzphqm
       '@storybook/addons': 6.5.15_biqbaboplfbrettd7655fr4n2y
-      '@storybook/builder-webpack4': 6.5.15_72f5ylvv5qyncwuu36nsfplvaa
       '@storybook/builder-webpack5': 6.5.15_72f5ylvv5qyncwuu36nsfplvaa
       '@storybook/client-logger': 6.5.15
       '@storybook/core': 6.5.15_zyxnenq5o2gghauhwyrvk63grm
       '@storybook/core-common': 6.5.15_72f5ylvv5qyncwuu36nsfplvaa
       '@storybook/csf': 0.0.2--canary.4566f4d.1
       '@storybook/docs-tools': 6.5.15_biqbaboplfbrettd7655fr4n2y
-      '@storybook/manager-webpack4': 6.5.15_72f5ylvv5qyncwuu36nsfplvaa
       '@storybook/manager-webpack5': 6.5.15_72f5ylvv5qyncwuu36nsfplvaa
       '@storybook/node-logger': 6.5.15
       '@storybook/react-docgen-typescript-plugin': 1.0.2-canary.6.9d540b91e815f8fc2f8829189deb00553559ff63.0_3fkjkrd3audxnith3e7fo4fnxi
@@ -9561,11 +9544,6 @@ packages:
 
   /ms/2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
-    dev: true
-
-  /mustache/4.2.0:
-    resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
-    hasBin: true
     dev: true
 
   /nan/2.17.0:
