@@ -72,8 +72,6 @@
     "peerDependencyRules": {
       "ignoreMissing": [
         "@babel/*",
-        "react",
-        "react-dom",
         "webpack"
       ]
     }
