@@ -1,11 +1,10 @@
 import pkg from "./package.json" assert { type: "json" };
 import nodeResolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import typescript from "@rollup/plugin-typescript";
+import typescript from "rollup-plugin-ts";
 import terser from "@rollup/plugin-terser";
 import external from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
-import dts from "rollup-plugin-dts";
 import copy from "rollup-plugin-copy";
 
 const BUNDLE_DIR = "bundle";
@@ -30,14 +29,7 @@ export default [
       external(),
       nodeResolve(),
       commonjs(),
-      typescript({
-        compilerOptions: {
-          declaration: false,
-          emitDeclarationOnly: false
-        },
-        exclude: ["**/stories/**"],
-        tsconfig: "./tsconfig.json"
-      }),
+      typescript(),
       postcss(),
       terser(),
       copy({
@@ -46,14 +38,5 @@ export default [
         ]
       })
     ]
-  },
-  {
-    input: "build/types/index.d.ts",
-    output: {
-      file: `${BUNDLE_DIR}/${pkg.types}`,
-      format: "es"
-    },
-    external: [/\.scss$/],
-    plugins: [dts()]
   }
 ];

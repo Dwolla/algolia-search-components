@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "build/types",
-    "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
@@ -19,6 +17,7 @@
     "target": "es6"
   },
   "exclude": [
+    "bundle",
     "node_modules"
   ],
   "include": [
