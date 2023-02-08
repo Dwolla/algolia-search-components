@@ -1,7 +1,7 @@
 import pkg from "./package.json" assert { type: "json" };
 import nodeResolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import typescript from "rollup-plugin-typescript2";
+import typescript from "@rollup/plugin-typescript";
 import terser from "@rollup/plugin-terser";
 import external from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
@@ -17,11 +17,13 @@ export default [
     output: [
       {
         file: `${BUNDLE_DIR}/${pkg.main}`,
-        format: "cjs"
+        format: "cjs",
+        sourcemap: true
       },
       {
         file: `${BUNDLE_DIR}/${pkg.module}`,
-        format: "es"
+        format: "es",
+        sourcemap: true
       }
     ],
     plugins: [
@@ -29,14 +31,12 @@ export default [
       nodeResolve(),
       commonjs(),
       typescript({
+        compilerOptions: {
+          declaration: false,
+          emitDeclarationOnly: false
+        },
         exclude: ["**/stories/**"],
-        tsconfig: "./tsconfig.json",
-        tsconfigOverride: {
-          compilerOptions: {
-            declaration: false,
-            emitDeclarationOnly: false
-          }
-        }
+        tsconfig: "./tsconfig.json"
       }),
       postcss(),
       terser(),

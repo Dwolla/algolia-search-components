@@ -3,6 +3,7 @@ import { autocomplete, getAlgoliaResults } from "@algolia/autocomplete-js";
 import type { HighlightedHit } from "@algolia/autocomplete-preset-algolia";
 import type { SearchOptions } from "@algolia/client-search";
 import type { SearchClient } from "algoliasearch/lite";
+import type { FC } from "react";
 import { createElement, Fragment, useEffect, useRef } from "react";
 import type { Root } from "react-dom/client";
 import { createRoot } from "react-dom/client";
@@ -56,7 +57,7 @@ const tryDebounce = async (items: AlgoliaSource, time?: number): Promise<Algolia
     time ? debouncePromise((items) => resolve(items), time)(items) : resolve(items)
   );
 
-const AlgoliaAutocomplete = (props: AlgoliaAutocompleteProps): JSX.Element => {
+const AlgoliaAutocomplete: FC<AlgoliaAutocompleteProps> = (props) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const panelRootRef = useRef<Root | null>(null);
   const rootRef = useRef<HTMLElement | null>(null);
