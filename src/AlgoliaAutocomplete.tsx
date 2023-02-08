@@ -14,7 +14,7 @@ import debouncePromise from "./utils/debouncePromise";
 
 import "./index.scss";
 
-interface AlgoliaAutocompleteProps extends Partial<AutocompleteOptions<AlgoliaRecord>> {
+export interface AlgoliaAutocompleteProps extends Partial<AutocompleteOptions<AlgoliaRecord>> {
   branch: string;
   debounceTimeout?: number;
   searchClient: SearchClient;
