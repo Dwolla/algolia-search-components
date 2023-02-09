@@ -45,10 +45,7 @@ jobs:
       - name: Run Linter Checks
         run: pnpm checks
 
-      - name: Build Project
-        run: pnpm build
-
-      - name: Bundle/Rollup Project
+      - name: Build & Bundle Project
         run: pnpm bundle
 
       - name: Deploy to Branch
