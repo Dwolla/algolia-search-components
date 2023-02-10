@@ -5,8 +5,6 @@ import algoliasearch from "algoliasearch/lite";
 
 const searchClient = algoliasearch("4C7VLPQA76", "a9cfed5acb56143690b612167d89a1b5");
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 storiesOf("AlgoliaAutocomplete", module)
   .add("Default", () => (
     <AlgoliaAutocomplete
@@ -19,7 +17,7 @@ storiesOf("AlgoliaAutocomplete", module)
   .add("Debounced - 1s", () => (
     <AlgoliaAutocomplete
       branch="master"
-      debounceTimeout="1000"
+      debounceTimeout={1000}
       searchClient={searchClient}
       siteId="9209706f-d5b7-46e2-bb88-5d6bedd2823f"
       searchOptions={{ analytics: true, hitsPerPage: 5 }}
