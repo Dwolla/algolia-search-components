@@ -107,7 +107,7 @@ $font-size: $font-size-m;
 
 .aa-Item {
   color: var(--color-text);
-  padding: $size-xs 0;
+  padding: $size-m $size-s;
 
   a {
     color: inherit;
@@ -200,6 +200,6 @@ $font-size: $font-size-m;
   text-align: right;
   font-size: $font-size-xs;
   color: $color-muted;
-  padding: $size-m $size-m $size-s 0;
+  padding: $size-l $size-m $size-s 0;
   font-weight: normal;
 }
